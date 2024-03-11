@@ -66,15 +66,15 @@
 }
 
 .input-group {
-  @apply bg-gray-200 px-4 py-2 rounded flex items-center;
+  @apply bg-gray-100 px-4 py-2 rounded flex items-center;
 }
 
 .input-group-pill {
-  @apply bg-gray-200 px-4 py-1 rounded-full flex items-center;
+  @apply bg-gray-100 px-4 py-1 rounded-full flex items-center;
 }
 
 .input-group-input {
-  @apply outline-none bg-gray-200 w-full;
+  @apply outline-none bg-gray-100 w-full;
 }
 
 
