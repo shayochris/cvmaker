@@ -19,7 +19,7 @@ export default function Education() {
       <form onSubmit={handlesubmit} className=" bordered form px-4 py-2">
         <div className="my-2">
           <p className="h3 text-gray-400 flex-a">
-            <div className="w-8 h-8 text-white flex-c bg-secondary mr-2 rounded-lg">1</div>
+            <div className="w-8 h-8 text-white flex-c bg-secondary mr-2 rounded-lg">2</div>
             Education
           </p>
           <p className="text-xs my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
