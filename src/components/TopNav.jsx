@@ -6,7 +6,7 @@ import { AiOutlineSearch } from 'react-icons/ai'
 
 export default function TopNav() {
   return (
-    <div className='bg-white p-2 flex-b sticky top-0 left-0 border-b shadow-sm'>
+    <div className='bg-white p-3 flex-b sticky top-0 left-0 border-b shadow-sm'>
       <Link to="/" >Dashboard</Link>
 
       <div className='w-[40%]' >

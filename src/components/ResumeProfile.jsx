@@ -13,15 +13,15 @@ import { PiLinkSimpleBold } from "react-icons/pi";
 
 export default function ResumeProfile() {
   const sections = [
-    { icon: <FaUser className='p-icon' />, title: "Profile Information", to: "/profile/personal" },
-    { icon: <IoSchool className='p-icon' />, title: "Education", to: "/profile/education" },
-    { icon: <BsStars className='p-icon' />, title: "skills", to: "/profile/skills" },
-    { icon: <FaBriefcase className='p-icon' />, title: "Experience", to: "/profile/experience" },
-    { icon: <GiAchievement className='p-icon' />, title: "Projects", to: "/profile/projects" },
-    { icon: <IoLanguageSharp className='p-icon' />, title: "Language proeficiency", to: "/profile/languages" },
-    { icon: <MdInterests className='p-icon' />, title: "Hobbies & interests", to: "/profile/hobbies" },
-    { icon: <FaUserTie className='p-icon' />, title: "Referees", to: "/profile/referees" },
-    { icon: <PiLinkSimpleBold className='p-icon' />, title: "Links", to: "/profile/links" },
+    { icon: <FaUser className='p-icon' />, title: "Personal Details", to: "/create/personal" },
+    { icon: <IoSchool className='p-icon' />, title: "Education", to: "/create/education" },
+    { icon: <BsStars className='p-icon' />, title: "skills", to: "/create/skills" },
+    { icon: <FaBriefcase className='p-icon' />, title: "Experience", to: "/create/experience" },
+    { icon: <GiAchievement className='p-icon' />, title: "Projects", to: "/create/projects" },
+    { icon: <IoLanguageSharp className='p-icon' />, title: "Language proeficiency", to: "/create/languages" },
+    { icon: <MdInterests className='p-icon' />, title: "Hobbies & interests", to: "/create/hobbies" },
+    { icon: <FaUserTie className='p-icon' />, title: "Referees", to: "/create/referees" },
+    { icon: <PiLinkSimpleBold className='p-icon' />, title: "Links", to: "/create/links" },
 
   ]
   return (

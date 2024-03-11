@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { Link, NavLink, Navigate, Outlet } from 'react-router-dom'
 import { AuthContext } from '../contexts/AuthContext'
+import Sidebar from '../components/Sidebar'
+import TopNav from '../components/TopNav'
 
 //icons
 
