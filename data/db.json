@@ -1,0 +1,16 @@
+{
+  "Resumes": [
+    {
+      "title": "Web developer",
+      "progress": "40%"
+    },
+    {
+      "title": "Graphics Designer",
+      "progress": "60%"
+    },
+    {
+      "title": "Data Analyst",
+      "progress": "70%"
+    }
+  ]
+}
