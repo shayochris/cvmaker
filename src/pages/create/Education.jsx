@@ -22,15 +22,17 @@ export default function Education() {
           </div>
         </div>
         <div className="my-3">
+          <label htmlFor="" className="label block my-1">Start date</label>
           <div className="input-group">
             <FaRegCalendarAlt className='input-group-icon' />
-            <input type="text" className="input-group-input" placeholder='start date' />
+            <input type="date" className="input-group-input" placeholder='start date' />
           </div>
         </div>
         <div className="my-3">
+          <label htmlFor="" className="label block my-1">End date</label>
           <div className="input-group">
             <FaRegCalendarAlt className='input-group-icon' />
-            <input type="text" className="input-group-input" placeholder='end date' />
+            <input type="date" className="input-group-input" placeholder='end date' />
           </div>
         </div>
         <div className="my-3">
