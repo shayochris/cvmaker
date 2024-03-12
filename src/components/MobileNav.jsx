@@ -16,7 +16,7 @@ import { PiLinkSimpleBold } from "react-icons/pi";
 
 
 
-export default function Sidebar({ menu = "default" }) {
+export default function MobileNav({ menu = "default" }) {
 
   const default_menu = [
     { title: "Dashboard", icon: "home", link: "home" },
@@ -61,14 +61,13 @@ export default function Sidebar({ menu = "default" }) {
 
 
   return (
-    <div className="sidebar relative">
+    <div className="mobile-nav relative">
 
-
-      <div className="hidden lg:flex items-center justify-center p-2 border-b-2 border-[#00416A]">
+      <div className="flex items-center justify-center p-2 border-b-2 border-[#00416A]">
         <p className='h3'>Logo</p>
       </div>
 
-      <div className="lg:p-2">
+      <div className="p-2">
         {menu_items.map(item => (
           <NavLink to={`/${item.link}`} className="sidebar-link" >
             {item.icon && getIcon(item.icon)}

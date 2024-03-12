@@ -27,6 +27,7 @@ import Languages from "./pages/create/Languages"
 import Hobbies from "./pages/create/Hobbies"
 import Referees from "./pages/create/Referees"
 import Links from "./pages/create/Links"
+import MainProvider from "./contexts/MainContext"
 
 
 function App() {
@@ -63,7 +64,9 @@ function App() {
   )
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <MainProvider>
+        <RouterProvider router={router} />
+      </MainProvider>
     </AuthProvider>
   )
 

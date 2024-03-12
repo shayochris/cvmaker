@@ -84,7 +84,11 @@
 
 /* dashboards and navigations */
 .sidebar {
-  @apply w-[10%] lg:w-[25%] h-screen bg-primary sticky top-0 left-0 text-white flex justify-center lg:block;
+  @apply hidden lg:w-[25%] h-screen bg-primary sticky top-0 left-0 text-white lg:block;
+}
+
+.mobile-nav {
+  @apply lg:hidden h-screen bg-primary sticky top-0 left-0 text-white lg:block;
 }
 
 .sidebar-link {
@@ -96,11 +100,11 @@
 }
 
 .sidebar-link-icon {
-  @apply w-6 h-6 lg:mr-2;
+  @apply w-6 h-6 mr-2;
 }
 
 .main {
-  @apply w-[90%] h-screen overflow-y-scroll;
+  @apply w-full h-screen overflow-y-scroll;
 }
 
 /* cards */

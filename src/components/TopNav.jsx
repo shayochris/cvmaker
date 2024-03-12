@@ -1,25 +1,32 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import MobileNav from './MobileNav'
 
 //icons
-import { AiOutlineSearch } from 'react-icons/ai'
+import { HiMenuAlt2 } from "react-icons/hi";
 
-export default function TopNav() {
+
+
+export default function TopNav({ menu }) {
+  const [mobileMenu, setMobileMenu] = useState(false)
   return (
-    <div className='bg-white p-3 flex-b sticky top-0 left-0 border-b shadow-sm'>
-      <Link to="/" >Dashboard</Link>
-
-      <div className='w-[40%]' >
-        {/* <div className="input-group-pill">
-          <AiOutlineSearch className='input-group-icon' />
-          <input type="text"
-            className="input-group-input"
-            placeholder="Search"
-          />
-        </div> */}
+    <div className='bg-white p-3 flex-b sticky top-0 left-0 border-b shadow-sm z-10'>
+      <div className="flex-a">
+        <HiMenuAlt2 onClick={() => setMobileMenu(true)} className='w-6 h-6 mr-2' />
+        <Link to="/" >Dashboard</Link>
       </div>
-
       <Link to="/login">Logout</Link>
+
+      {mobileMenu &&
+        <div className="lg:hidden fixed w-full h-screen top-0 left-0">
+          <div className="w-full flex h-full">
+            <div className='w-[60%]' >
+              <MobileNav menu={menu} />
+            </div>
+            <div onClick={() => setMobileMenu(false)} className="w-[40%] bg-black/40"></div>
+          </div>
+        </div>}
+
     </div>
   )
 }
