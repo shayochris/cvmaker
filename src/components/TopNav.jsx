@@ -4,6 +4,7 @@ import MobileNav from './MobileNav'
 
 //icons
 import { HiMenuAlt2 } from "react-icons/hi";
+import { MdLogout } from "react-icons/md";
 
 
 
@@ -12,10 +13,15 @@ export default function TopNav({ menu }) {
   return (
     <div className='bg-white p-3 flex-b sticky top-0 left-0 border-b shadow-sm z-10'>
       <div className="flex-a">
-        <HiMenuAlt2 onClick={() => setMobileMenu(true)} className='w-6 h-6 mr-2' />
-        <Link to="/" >Dashboard</Link>
+        <HiMenuAlt2 onClick={() => setMobileMenu(true)} className='w-6 h-6 mr-2 lg:hidden' />
+        <Link to="/" className='flex-a'>
+          <HiMenuAlt2 onClick={() => setMobileMenu(true)} className='hidden lg:block w-6 h-6 mr-2' />
+          Dashboard
+        </Link>
       </div>
-      <Link to="/login">Logout</Link>
+      <Link to="/login">
+        <MdLogout className='w-5 h-5' />
+      </Link>
 
       {mobileMenu &&
         <div className="lg:hidden fixed w-full h-screen top-0 left-0">
