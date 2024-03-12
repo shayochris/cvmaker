@@ -30,7 +30,9 @@ export default function Education() {
             <HiBuildingOffice2 className='input-group-icon' />
             <input type="text"
               className="input-group-input"
-              placeholder='institution' />
+              placeholder='institution'
+              required
+            />
           </div>
         </div>
 
@@ -40,7 +42,9 @@ export default function Education() {
             <FaRegCalendarAlt className='input-group-icon' />
             <input type="date"
               className="input-group-input"
-              placeholder='start date' />
+              placeholder='start date'
+              required
+            />
           </div>
         </div>
 
@@ -50,7 +54,9 @@ export default function Education() {
             <FaRegCalendarAlt className='input-group-icon' />
             <input type="date"
               className="input-group-input"
-              placeholder='end date' />
+              placeholder='end date'
+              required
+            />
           </div>
         </div>
 

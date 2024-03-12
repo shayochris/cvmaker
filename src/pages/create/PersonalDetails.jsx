@@ -31,24 +31,32 @@ export default function PersonalDetails() {
             <FaUser className='input-group-icon' />
             <input type="text"
               className="input-group-input"
-              placeholder='Full Name' />
+              placeholder='Full Name'
+              required
+            />
           </div>
         </div>
 
         <div className="my-3">
           <div className="input-group">
-            <IoMdMail className='input-group-icon' />
+            <IoMdMail className='input-group-icon'
+            />
             <input type="text"
               className="input-group-input"
-              placeholder='Email' />
+              placeholder='Email'
+              required
+            />
           </div>
         </div>
         <div className="my-3">
+          <p className="label my-1">Date of Birth</p>
           <div className="input-group">
             <FaRegCalendarAlt className='input-group-icon' />
-            <input type="text"
+            <input type="date"
               className="input-group-input"
-              placeholder='Date Of Birth' />
+              placeholder='Date Of Birth'
+              required
+            />
           </div>
         </div>
 
@@ -57,25 +65,33 @@ export default function PersonalDetails() {
             <FaBriefcase className='input-group-icon' />
             <input type="text"
               className="input-group-input"
-              placeholder='Profession' />
+              placeholder='Profession'
+              required
+            />
           </div>
         </div>
 
         <div className="my-3">
           <div className="input-group">
-            <FaPhone className='input-group-icon' />
+            <FaPhone className='input-group-icon'
+            />
             <input type="text"
               className="input-group-input"
-              placeholder='Phone' />
+              placeholder='Phone'
+              required
+            />
           </div>
         </div>
 
         <div className="my-3">
           <div className="input-group">
-            <FaFlag className='input-group-icon' />
+            <FaFlag className='input-group-icon'
+            />
             <input type="text"
               className="input-group-input"
-              placeholder='Nationality' />
+              placeholder='Nationality'
+              required
+            />
           </div>
         </div>
 
