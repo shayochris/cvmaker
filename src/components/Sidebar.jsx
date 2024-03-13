@@ -69,8 +69,8 @@ export default function Sidebar({ menu = "default" }) {
       </div>
 
       <div className="lg:p-2">
-        {menu_items.map(item => (
-          <NavLink to={`/${item.link}`} className="sidebar-link" >
+        {menu_items.map((item, id) => (
+          <NavLink key={id} to={`/${item.link}`} className="sidebar-link" >
             {item.icon && getIcon(item.icon)}
             <p className=''>{item.title}</p>
           </NavLink>
