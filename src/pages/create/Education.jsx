@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react'
-import { AiFillAlert } from 'react-icons/ai'
+
+//icons
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { useNavigate } from 'react-router-dom';
+
 
 export default function Education() {
   const education = JSON.parse(localStorage.getItem("education"))
@@ -26,7 +28,6 @@ export default function Education() {
 
     setInstitution(""); setStartDate(""); setEndDate("");
   }
-
   return (
     <div className='container-md'>
 
