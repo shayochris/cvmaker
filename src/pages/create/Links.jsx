@@ -1,3 +1,4 @@
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import React, { useEffect, useRef, useState } from 'react'
 
 //icons
@@ -5,12 +6,15 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
+import ResumePreview from '../../components/ResumePreview';
+import Modal from '../../components/Modal';
 
 
 export default function Links() {
   const links = JSON.parse(localStorage.getItem("links"))
   const [link, setlink] = useState()
   const navigate = useNavigate()
+  const modal = useRef();
 
   const handlesubmit = (e) => {
     e.preventDefault()
@@ -26,6 +30,14 @@ export default function Links() {
     }
 
     setInstitution(""); setStartDate(""); setEndDate("");
+  }
+
+  const showPDF = () => {
+    let component =
+      <PDFViewer style={{ width: '100%', height: '500px' }}>
+        <ResumePreview />
+      </PDFViewer>;
+    modal.current.showModal(component, 'My Resume')
   }
 
   return (
@@ -60,19 +72,29 @@ export default function Links() {
             {links ? "Add link" : "save"}
           </button>
         </div>
-        <div className="my-3">
-          <button
-            onClick={(e) => {
-              e.preventDefault()
-              navigate("/create/referees")
-            }
-            }
-            className="btn-secondary w-full ">
-            Next
-          </button>
-        </div>
 
       </form>
+      <div className="px-4">
+        <div className=" lg:hidden ">
+          <PDFDownloadLink document={<ResumePreview />} fileName='MyResume'>
+            <button
+              className="btn-secondary w-full ">
+              Download Cv
+            </button>
+          </PDFDownloadLink>
+        </div>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            showPDF();
+          }}
+          className="btn-secondary w-full hidden lg:block">
+          Preview CV
+        </button>
+      </div>
+
+
+      <Modal ref={modal} />
     </div>
   )
 }
